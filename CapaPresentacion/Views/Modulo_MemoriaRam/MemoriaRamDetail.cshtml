@@ -1,0 +1,89 @@
+﻿@model CapaEntidad.datos_Ram
+
+@{
+    ViewBag.Title = "MemoriaRamDetail";
+}
+
+<h2>Detalles de Memoria Ram</h2>
+
+<div>
+    <h4>Memoria Ram</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Frequency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Frequency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservadoPor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.id }) |
+    @Html.ActionLink("Regresar al listado", "Index")
+</p>

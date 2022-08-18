@@ -1,0 +1,57 @@
+﻿@model CapaEntidad.Bateria
+
+@{
+    ViewBag.Title = "BateriaDetail";
+}
+
+<h2>Detalles de Bateria</h2>
+
+<div>
+    <h4>Bateria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservadoPor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.id }) |
+    @Html.ActionLink("Regresar al Listado", "Index")
+</p>

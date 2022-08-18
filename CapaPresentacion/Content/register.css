@@ -1,0 +1,17 @@
+﻿body {
+    background-image: url('../Img/fondo.jpg');
+    text-align: center;
+    margin-left: 50px;
+    color: white;
+    padding: 30px;
+    background-size: cover;
+}
+.form-group {
+    margin-right: 100px;
+}
+.newregister {
+    margin-left: 300px;
+}
+.botonregister {
+    margin-right: 400px;
+}

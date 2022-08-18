@@ -1,0 +1,126 @@
+﻿@model IEnumerable<CapaEntidad.AspNetUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<body>
+    <h2>Listado de Usuarios Registrados</h2>
+    <br />
+    @section styles{
+        <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
+    }
+    <p>@Html.ActionLink("Registrar nuevo usuario", "Register", "Account")</p>
+
+    <br />
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>*@
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.Perfil)
+                    </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EmailConfirmed)
+                    </th>
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.PasswordHash)
+                    </th>*@
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.SecurityStamp)
+                    </th>*@
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TwoFactorEnabled)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LockoutEndDateUtc)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LockoutEnabled)
+                    </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.AccessFailedCount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>*@
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.Perfil)
+                        </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmailConfirmed)
+                        </td>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.PasswordHash)
+                        </td>*@
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.SecurityStamp)
+                        </td>*@
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhoneNumberConfirmed)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TwoFactorEnabled)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LockoutEndDateUtc)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LockoutEnabled)
+                        </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AccessFailedCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                            @Html.ActionLink("Detalles", "AdminDetail", new { id = item.Id }) |
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        @section scripts{
+            <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+            <script>
+                $('#usertable').DataTable();
+            </script>
+        }
+    </div>
+    
+</body>
+

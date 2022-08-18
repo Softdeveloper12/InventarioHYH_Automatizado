@@ -1,0 +1,47 @@
+﻿body {
+    background-image: url('../Img/sistemas de gestion de inventarios.jpg');
+    text-align: center;
+    margin-left: 50px;
+    color: white;
+    padding: 30px;
+    background-size: cover;
+}
+.laptop {
+    width: 300px;
+    height:200px;
+}
+
+.desktop {
+    width: 300px;
+    height: 200px;
+}
+
+.monitor {
+    width: 300px;
+    height: 180px;
+}
+
+.ram {
+    width: 300px;
+    height: 200px;
+}
+
+.hdd {
+    width: 300px;
+    height: 200px;
+}
+
+.accesorios {
+    width: 300px;
+    height: 200px;
+}
+
+.bateria {
+    width: 300px;
+    height: 200px;
+}
+
+.cargador {
+    width: 300px;
+    height: 200px;
+}

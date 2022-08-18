@@ -1,0 +1,49 @@
+﻿body {
+    background-image: url('../Img/fondo.jpg');
+    text-align: center;
+    margin-left: 110px;
+    color: white;
+    padding: 50px;
+    background-size: cover;
+}
+
+.remember {
+    margin-left: 50px;
+}
+
+.newregister {
+    margin-left: 190px;
+    color: white;
+}
+
+.form-group {
+    margin-right: 300px;
+}
+
+.icono {
+    margin-right: 150px;
+    background-size: inherit;
+    max-width: 20%;
+    max-height: 50%;
+}
+.container {
+    
+}
+
+.titulo {
+    margin-left: 270px;
+}
+.iniciarsesion {
+    margin-left: 70px;
+    color: black;
+}
+
+.emailpassword {
+    margin-left: 300px;
+}
+.forgot {
+    margin-left: 250px;
+}
+
+
+

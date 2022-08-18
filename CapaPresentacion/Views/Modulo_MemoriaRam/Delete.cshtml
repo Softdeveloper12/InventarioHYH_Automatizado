@@ -1,0 +1,95 @@
+﻿@model CapaEntidad.datos_Ram
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar Memoria Ram</h2>
+
+<h3>Estas seguro de que quieres ELIMINAR esto?</h3>
+<div>
+    <h4>Memoria Ram</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Frequency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Frequency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservadoPor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar al listado", "Index")
+        </div>
+    }
+</div>

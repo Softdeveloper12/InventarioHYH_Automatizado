@@ -1,0 +1,100 @@
+﻿@model IEnumerable<CapaEntidad.Monitore>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+
+<body>
+    <h2>Listado de Monitores</h2>
+    @section styles{
+        <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
+    }
+    <p>
+        @Html.ActionLink("Ingresar un nuevo monitor", "Create", "Modulo_Monitores")
+    </p>
+
+    <div>
+        <table class="table" id="usertable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Brand)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Quantity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Model)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Serial)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ReservadoPor)
+                    </th>
+                    <th></th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Model)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Serial)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReservadoPor)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Editar", new { id = item.id }) |
+                        @Html.ActionLink("Detalles", "MonitorDetail", new { id = item.id }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.id })
+
+                    </td>
+                </tr>
+
+                }
+            </tbody>
+
+
+        </table>
+        @section scripts{
+            <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+            <script>
+                $('#usertable').DataTable();
+            </script>
+        }
+
+    </div>
+
+    <br />
+    @Html.ActionLink("Regresar al Menu", "Index", "Home")
+
+
+</body>
